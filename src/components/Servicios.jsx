@@ -12,7 +12,7 @@ export const Servicios = () => {
             loop
             playsInline
         >
-            <source src="/barber.mp4" type="video/mp4" />
+            <source src="/barber.webm" type="video/webm" />
             Tu navegador no soporta el vídeo.
         </video>
         <div className="services-hero__overlay"></div>

@@ -1,0 +1,270 @@
+@media (hover: none) and (pointer: coarse) {
+  .servicios__boton {
+    background-color: var(--color-button-services);
+    color: white;
+  }
+}
+
+@media (max-width: 700px) {
+    .header__container {
+        padding: 2rem 2rem;
+    }
+
+    .header__logo {
+        font-size: 1.6rem;
+    }
+
+    .header__link {
+        font-size: 1.5rem;
+    }
+
+    .contacto__fila {
+        flex-direction: column;
+    }
+
+    .contacto__mapa {
+        min-width: 60%;
+    }
+
+    .contacto__formulario {
+        min-width: 100%;
+    }
+
+    .formulario {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicios__titulo {
+        font-size: 1.5rem;
+    }
+
+    .servicios__descripcion {
+        font-size: 1.4rem;
+    }
+
+    .testimonios__grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonios__card {
+        width: 80%;
+    }
+
+    /*servicios*/
+    .servicios__fila {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .servicios__info,
+    .servicios__imagen {
+        width: 100%;
+    }
+
+    .servicios__imagen {
+        display: block !important;
+        height: 250px !important;
+        min-height: 250px !important;
+        max-height: none !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .servicios__imagen::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .servicios__card {
+        width: 70%;
+        gap: 1rem;
+        margin: 2rem 0;
+        padding: 1.5rem 2rem;
+    }
+
+    .servicios__foto {
+        width: 80px;
+    }
+
+    .servicios__titulo {
+        font-size: 1.6rem;
+    }
+
+    .servicios__descripcion {
+        font-size: 1.4rem;
+    }
+
+    .reto__titulo {
+        font-size: 3.5rem;
+    }
+
+    .reto__descripcion {
+        font-size: 1.6rem;
+    }
+
+    .reto__media {
+        width: 90%;
+    }
+
+    /*CONTACTO*/
+    .footer-contacto {
+        padding: 4rem 2rem;
+        gap: 3rem;
+    }
+
+    /*MENÚ RESPONSIVE*/
+    .header__toggle {
+        display: flex;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .header__menu--open {
+        transform: translateX(0%);
+    }
+
+    .header__link {
+        font-size: 2.2rem;
+        color: black;
+        padding-bottom: 0;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero__title {
+        font-size: 4.2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 2rem;
+    }
+
+    .servicios__imagen {
+        all: unset;
+        display: block !important;
+        height: 200px !important;
+        min-height: 200px !important;
+        max-height: 200px !important;
+        background-size: cover !important;
+        background-position: center bottom !important;
+    }
+}
+
+@media (max-width: 440px) {
+    .reto__titulo {
+        font-size: 3rem;
+    }
+
+    .reto__descripcion {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero__title {
+        font-size: 3.9rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.7rem;
+    }
+    
+    .servicios__titulo {
+        font-size: 1.3rem;
+    }
+
+    .servicios__imagen {
+        all: unset;
+        display: block !important;
+        height: 175px !important;
+        min-height: 175px !important;
+        max-height: 175px !important;
+        background-size: cover !important;
+        background-position: center bottom !important;
+    }
+
+    .servicios__titulo-seccion {
+        font-size: 4.75rem;
+    }
+
+    .testimonios__titulo {
+        font-size: 2.5rem;
+    }
+
+    /*SERVICIOS*/
+    .services-list__contenedor {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .reservas {
+        padding: 4rem 1rem;
+    }
+
+    .formulario {
+        width: 92%;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 352px) {
+
+    .servicios__titulo-seccion {
+        font-size: 4.25rem;
+    }
+
+    .servicios__card {
+        width: 85%;
+    }
+
+    .reto__descripcion {
+        font-size: 1.2rem;
+    }
+
+    .services-list {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .services-list__contenedor {
+        padding: 5rem 0rem;
+    }
+}
+
+@media (max-width: 315px) {
+    .services-cta__titulo {
+        font-size: 2.6rem;
+    }
+
+    .services-cta__texto {
+        font-size: 1.3rem;
+    }
+}

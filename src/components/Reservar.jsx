@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Reservar = () => {
+
+    const [cargado, setCargado] = useState(false);
   return (
     <>
+
+        <div className="reservas__fondo">
+            <img src="/neon-blur.jpg" className="fondo fondo--blur" />
+            <img
+            src="/neon.jpg"
+            className={`fondo fondo--hd ${cargado ? 'cargado' : ''}`}
+            onLoad={() => setCargado(true)}
+            />
+        </div>
+
         <main className="reservas">
             <div className="reservas__contenedor">
                 <section className="reservas__intro">

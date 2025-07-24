@@ -632,8 +632,16 @@ body {
 
 
 /* PÁGINA DE CONTACTO */
+.contacto__fondo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
 .seccion-contacto {
-  background-color: #0f0f0f;
+  background-color: transparent;
+  backdrop-filter: none;
   color: var(--color-text);
   font-family: var(--font-texto);
   padding-top: 6rem;
@@ -677,6 +685,7 @@ body {
   max-width: 400px;
   border: none;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
+
 }
 
 .contacto__formulario {

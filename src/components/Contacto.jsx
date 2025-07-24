@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 export const Contacto = () => {
+
+    const [cargado, setCargado] = useState(false);
+
   return (
     <>
         {/* <!-- Contacto --> */}
+        <div className="contacto__fondo">
+            <img src="/basket-blur.jpg" className="fondo fondo--blur" />
+            <img
+                src="/basket.jpg"
+                className={`fondo fondo--hd ${cargado ? 'cargado' : ''}`}
+                onLoad={() => setCargado(true)}
+            />
+        </div>
         <section className="seccion-contacto">
             <h2 className="contacto__titulo-seccion">Contáctanos</h2>
 

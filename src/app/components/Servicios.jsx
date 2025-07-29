@@ -11,6 +11,7 @@ export default function Servicios() {
             muted
             loop
             playsInline
+            preload="auto"
         >
             <source src="/barber.webm" type="video/webm" />
             Tu navegador no soporta el vídeo.

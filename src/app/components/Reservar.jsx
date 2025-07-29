@@ -7,7 +7,14 @@ export default function Reservar() {
     <>
 
         <div className="reservas__fondo">
-            <Image alt="Fondo de reservas" src="/neon.jpg" className="fondo" fill priority/>
+            <Image
+                alt="Fondo de reservas"
+                src="/neon.webp"
+                fill
+                priority
+                placeholder="blur"
+                className="fondo"
+            />
         </div>
 
         <main className="reservas">

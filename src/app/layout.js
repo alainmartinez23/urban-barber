@@ -12,9 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <head>
         <link rel="icon" href="/firmar.png" />
-        <link rel="preload" as="image" href="/barber.webp" />
-        <link rel="preload" as="image" href="/basket.webp" />
-        <link rel="preload" as="image" href="/neon.webp" />
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"></link>
       </head>
       <body>

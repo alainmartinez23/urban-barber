@@ -9,9 +9,10 @@ export default function Contacto() {
       {/* Fondo desenfocado */}
       <div className="contacto__fondo">
         <Image
-          src="/basket.jpg"
+          src="/basket.webp"
           alt="Fondo"
           className="fondo"
+          placeholder='blur'
           fill
           priority
           style={{ objectFit: 'cover', zIndex: -1 }}

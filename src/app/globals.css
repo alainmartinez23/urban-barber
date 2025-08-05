@@ -1033,6 +1033,32 @@ body[data-not-found] .header {
   margin-bottom: 3rem;
 }
 
+.formulario__confirmacion-flotante {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  background-color: #22c55e;
+  color: white;
+  font-size: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: aparecerDesaparecer 3s ease forwards;
+  z-index: 10;
+}
+
+@keyframes aparecerDesaparecer {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
+
+
 .reservas__formulario {
   display: flex;
   justify-content: center;

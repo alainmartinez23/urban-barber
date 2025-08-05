@@ -1,9 +1,46 @@
+'use client';
+
 export const dynamic = 'force-static';
 
 import Image from 'next/image';
 import MapaContacto from './MapaContacto';
+import { useState } from 'react';
 
 export default function Contacto() {
+
+  const [enviado, setEnviado] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      nombre: form.nombre.value,
+      email: form.email.value,
+      duda: form.mensaje.value,
+    };
+
+    try {
+      const res = await fetch('https://n8n-production-fc93.up.railway.app/webhook/516f1c09-4c93-492d-8c89-883dd9432fda', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setEnviado(true);
+        form.reset();
+      } else {
+        alert('Error al enviar el mensaje');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error de conexión');
+    }
+  };
+
+
   return (
     <>
       {/* Fondo desenfocado */}
@@ -12,7 +49,6 @@ export default function Contacto() {
           src="/basket.webp"
           alt="Fondo"
           className="fondo"
-          placeholder='blur'
           fill
           priority
           style={{ objectFit: 'cover', zIndex: -1 }}
@@ -28,13 +64,14 @@ export default function Contacto() {
 
           {/* Formulario */}
           <div className="contacto__formulario">
-            <form className="formulario">
+            <form className="formulario" onSubmit={handleSubmit}>
               <p className="formulario__titulo">¿Cuál es tu duda?</p>
-              <input type="text" placeholder="Nombre" required />
-              <input type="email" placeholder="Email" required />
-              <textarea placeholder="Mensaje" required></textarea>
+              <input type="text" name="nombre" placeholder="Nombre" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea name="mensaje" placeholder="Mensaje" required></textarea>
               <button type="submit">Enviar mensaje</button>
             </form>
+            {enviado && <p className="formulario__confirmacion">Mensaje enviado correctamente</p>}
           </div>
         </div>
 

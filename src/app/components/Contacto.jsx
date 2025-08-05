@@ -31,6 +31,10 @@ export default function Contacto() {
       if (res.ok) {
         setEnviado(true);
         form.reset();
+
+        setTimeout(() => {
+          setEnviado(false);
+        }, 3000);
       } else {
         alert('Error al enviar el mensaje');
       }

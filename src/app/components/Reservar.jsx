@@ -71,12 +71,11 @@ export default function Reservar() {
         const json = await res.json()
 
         if (!res.ok) {
-        console.error(json)
+          console.error(json)
         alert(json.error || 'Error al crear la reserva')
-        return
+          return
         }
 
-        alert('✅ Reserva confirmada. Revisa tu email.')
         setFormEnviado(true)
 
         form.reset()
